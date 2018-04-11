@@ -103,20 +103,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AXuanのBlog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="偶爾我們會需要直接操作DOM來達成某些需求 我們可以使用Vue提供的自訂義指令來達成 簡單的例子CodePen1234&amp;lt;div id=&quot;app&quot;&amp;gt;  &amp;lt;!-- 指令會自動添加&quot;v-&quot; --&amp;gt;  &amp;lt;h1 v-red-text&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/h1&amp;gt;&amp;lt;/div&amp;gt; 123456789101112131">
+<meta name="keywords" content="Vue.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自訂義指令">
+<meta property="og:url" content="http://yoursite.com/2018/04/11/自訂義指令/index.html">
 <meta property="og:site_name" content="AXuanのBlog">
+<meta property="og:description" content="偶爾我們會需要直接操作DOM來達成某些需求 我們可以使用Vue提供的自訂義指令來達成 簡單的例子CodePen1234&amp;lt;div id=&quot;app&quot;&amp;gt;  &amp;lt;!-- 指令會自動添加&quot;v-&quot; --&amp;gt;  &amp;lt;h1 v-red-text&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/h1&amp;gt;&amp;lt;/div&amp;gt; 123456789101112131">
 <meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2018-04-11T13:57:56.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AXuanのBlog">
+<meta name="twitter:title" content="自訂義指令">
+<meta name="twitter:description" content="偶爾我們會需要直接操作DOM來達成某些需求 我們可以使用Vue提供的自訂義指令來達成 簡單的例子CodePen1234&amp;lt;div id=&quot;app&quot;&amp;gt;  &amp;lt;!-- 指令會自動添加&quot;v-&quot; --&amp;gt;  &amp;lt;h1 v-red-text&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/h1&amp;gt;&amp;lt;/div&amp;gt; 123456789101112131">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/11/自訂義指令/"/>
 
 
 
@@ -126,7 +131,7 @@
   };
 </script>
 
-  <title>AXuanのBlog</title>
+  <title>自訂義指令 | AXuanのBlog</title>
   
 
 
@@ -173,8 +178,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,7 +218,7 @@
         
           
   
-  <li class="menu-item menu-item-home menu-item-active">
+  <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首頁</a>
 </li>
@@ -282,9 +286,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -316,9 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/11/自訂義指令/" itemprop="url">自訂義指令</a></h1>
+          <h1 class="post-title" itemprop="name headline">自訂義指令</h1>
         
 
         <div class="post-meta">
@@ -367,9 +369,7 @@
       
 
       
-        
-          
-            <p> 偶爾我們會需要直接操作DOM來達成某些需求<br> 我們可以使用Vue提供的自訂義指令來達成</p>
+        <p> 偶爾我們會需要直接操作DOM來達成某些需求<br> 我們可以使用Vue提供的自訂義指令來達成</p>
 <h3 id="簡單的例子"><a href="#簡單的例子" class="headerlink" title="簡單的例子"></a>簡單的例子</h3><p><a href="https://codepen.io/clay26953700/pen/GxeXpo?editors=1011" target="_blank" rel="noopener">CodePen</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 指令會自動添加"v-" --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-red-text</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">// 全域註冊必須寫在Vue實例之前</span></span><br><span class="line">  Vue.directive(<span class="string">'redText'</span>, &#123;</span><br><span class="line">      <span class="comment">// 我們在這裡註冊了全域的指令</span></span><br><span class="line">    inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">      el.style.color = <span class="string">'red'</span>;</span><br><span class="line">      <span class="comment">// el 便是我們要操作的DOM</span></span><br><span class="line">      <span class="comment">// 這邊將顏色改為紅色</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      msg: <span class="string">'123'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="指令的生命週期"><a href="#指令的生命週期" class="headerlink" title="指令的生命週期"></a>指令的生命週期</h3><p><a href="https://codepen.io/clay26953700/pen/VXRGJm?editors=1010" target="_blank" rel="noopener">CodePen</a></p>
@@ -385,8 +385,6 @@
 <li><a href="https://css-tricks.com/power-custom-directives-vue/" target="_blank" rel="noopener">The Power of Custom Directives in Vue</a></li>
 </ul>
 
-          
-        
       
     </div>
 
@@ -404,14 +402,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Vue-js/" rel="tag"># Vue.js</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -421,14 +425,19 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -449,8 +458,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -526,6 +544,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#簡單的例子"><span class="nav-number">1.</span> <span class="nav-text">簡單的例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令的生命週期"><span class="nav-number">2.</span> <span class="nav-text">指令的生命週期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#binding參數"><span class="nav-number">3.</span> <span class="nav-text">binding參數</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#參考資料"><span class="nav-number">4.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -660,6 +694,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
+
+
 
   
 
